@@ -10,7 +10,7 @@ source:
     md5: 789174bd519736ac1e726613b6eb7672
 
 build:
-    number: 2
+    number: 3
     features:
         - vc9  # [win and py27]
         - vc10  # [win and py34]
@@ -21,10 +21,10 @@ requirements:
         - toolchain
         - python  # [win]
         - cmake
-        - hdf5 1.8.17*
+        - hdf5 1.8.17|1.8.17.*
 
     run:
-        - hdf5 1.8.17*
+        - hdf5 1.8.17|1.8.17.*
 
 about:
     home: kealib.org
