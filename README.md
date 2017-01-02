@@ -11,6 +11,18 @@ Summary: The KEA format provides an implementation of the GDAL specification wit
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/kealib-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/kealib-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/kealib-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/kealib-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/kealib-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/kealib-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/kealib/badges/version.svg)](https://anaconda.org/conda-forge/kealib)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/kealib/badges/downloads.svg)](https://anaconda.org/conda-forge/kealib)
+
 Installing kealib
 =================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `kealib` available on your platfor
 ```
 conda search kealib --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/kealib-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/kealib-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/kealib-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/kealib-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/kealib-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/kealib-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/kealib/badges/version.svg)](https://anaconda.org/conda-forge/kealib)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/kealib/badges/downloads.svg)](https://anaconda.org/conda-forge/kealib)
 
 
 Updating kealib-feedstock
