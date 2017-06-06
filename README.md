@@ -1,7 +1,7 @@
 About kealib
 ============
 
-Home: kealib.org
+Home: http://kealib.org/
 
 Package license: MIT
 
