@@ -22,10 +22,15 @@ requirements:
         - toolchain
         - python  # [win]
         - cmake
-        - hdf5 1.8.17|1.8.17.*
+        - hdf5 1.8.18|1.8.18.*
 
     run:
-        - hdf5 1.8.17|1.8.17.*
+        - hdf5 1.8.18|1.8.18.*
+
+test:
+    commands:
+        - conda inspect linkages -p $PREFIX kealib  # [not win]
+        - conda inspect objects -p $PREFIX kealib  # [osx]
 
 about:
     home: http://kealib.org/
