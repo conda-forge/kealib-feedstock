@@ -14,10 +14,3 @@ cmake -D CMAKE_INSTALL_PREFIX=$PREFIX \
 make
 make install
 make test
-
-# hack so the old 1.4.6 .so still exists
-if [ `uname` == Darwin ]; then
-    ln -s $PREFIX/lib/libkea.1.4.7.dylib $PREFIX/lib/libkea.1.4.6.dylib
-else
-    ln -s $PREFIX/lib/libkea.so.1.4.7 $PREFIX/lib/libkea.so.1.4.6
-fi
