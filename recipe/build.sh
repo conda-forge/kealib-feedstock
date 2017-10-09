@@ -15,7 +15,7 @@ make
 make install
 make test
 
-# hack so the old 1.4.6 .so still exists
+# hack so the old 1.4.6 .so still exists for old builds. Remove in next version...
 if [ `uname` == Darwin ]; then
     ln -s $PREFIX/lib/libkea.1.4.7.dylib $PREFIX/lib/libkea.1.4.6.dylib
 else
