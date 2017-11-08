@@ -5,7 +5,6 @@ package:
     version: {{ version }}
 
 source:
-    fn: kealib-{{ version }}.tar.gz
     url: https://bitbucket.org/chchrsc/kealib/downloads/kealib-{{ version }}.tar.gz
     sha256: ec38751b3b555d3a26f0c7445f2d2cd9d7c3a3502237519a206a50cb58df56ec
     patches:
@@ -13,11 +12,10 @@ source:
         - soversion.patch
 
 build:
-    number: 3
+    number: 4
     skip: True  # [win and py36]
     features:
         - vc9  # [win and py27]
-        - vc10  # [win and py34]
         - vc14  # [win and py35]
 
 requirements:
@@ -25,15 +23,19 @@ requirements:
         - toolchain
         - python  # [win]
         - cmake
-        - hdf5 1.8.18|1.8.18.*
+        - hdf5 1.10.1
+        - vc 9  # [win and py27]
+        - vc 14  # [win and py35]
 
     run:
-        - hdf5 1.8.18|1.8.18.*
+        - hdf5 1.10.1
+        - vc 9  # [win and py27]
+        - vc 14  # [win and py35]
 
 test:
     commands:
-        - conda inspect linkages -p $PREFIX kealib  # [not win]
-        - conda inspect objects -p $PREFIX kealib  # [osx]
+        - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+        - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
     home: http://kealib.org/
