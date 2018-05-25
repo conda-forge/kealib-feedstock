@@ -9,7 +9,7 @@ cmake -D CMAKE_INSTALL_PREFIX=$PREFIX \
 -D CMAKE_PREFIX_PATH=$PREFIX \
 ..
 
-make
+make -j $CPU_COUNT
 make install
 make test
 
