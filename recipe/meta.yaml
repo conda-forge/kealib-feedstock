@@ -5,14 +5,12 @@ package:
     version: {{ version }}
 
 source:
-    url: https://bitbucket.org/chchrsc/kealib/downloads/kealib-{{ version }}.tar.gz
-    sha256: ec38751b3b555d3a26f0c7445f2d2cd9d7c3a3502237519a206a50cb58df56ec
-    patches:
-        # create links libkea.so, libkea.so.1.4 etc. Fixed in next version
-        - soversion.patch
+    #url: https://bitbucket.org/chchrsc/kealib/downloads/kealib-{{ version }}.tar.gz
+    #sha256: ec38751b3b555d3a26f0c7445f2d2cd9d7c3a3502237519a206a50cb58df56ec
+    hg_url: https://bitbucket.org/chchrsc/kealib
 
 build:
-    number: 4
+    number: 5
     skip: True  # [win and py36]
     features:
         - vc9  # [win and py27]
