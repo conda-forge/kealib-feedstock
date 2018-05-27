@@ -31,7 +31,11 @@ requirements:
         - vc 14  # [win and py35]
 
 test:
+    requires:
+        - libgdal 2.2.*
     commands:
+        # check we haven't broken GDAL
+        - gdal_translate --formats
         - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
         - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
