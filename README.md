@@ -14,14 +14,16 @@ Summary: The KEA format provides an implementation of the GDAL specification wit
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/kealib-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/kealib-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/kealib-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/kealib-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/kealib-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/kealib-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/kealib-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/kealib-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/kealib-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/kealib-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/kealib-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/kealib-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/kealib/badges/version.svg)](https://anaconda.org/conda-forge/kealib)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/kealib/badges/downloads.svg)](https://anaconda.org/conda-forge/kealib)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-kealib-green.svg)](https://anaconda.org/conda-forge/kealib) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/kealib.svg)](https://anaconda.org/conda-forge/kealib) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/kealib.svg)](https://anaconda.org/conda-forge/kealib) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/kealib.svg)](https://anaconda.org/conda-forge/kealib) |
 
 Installing kealib
 =================
