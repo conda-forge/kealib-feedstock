@@ -12,7 +12,7 @@ build:
     number: 0
     run_exports:
       # should be compatibility between minor releases
-      - {{ pin_subpackages('kealib', min_pin='x.x', max_pin='x.x') }}
+      - {{ pin_subpackage('kealib', min_pin='x.x', max_pin='x.x') }}
 
 requirements:
     build:
