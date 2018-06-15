@@ -10,24 +10,18 @@ source:
 
 build:
     number: 0
-    skip: True  # [win and py36]
-    features:
-        - vc9  # [win and py27]
-        - vc14  # [win and py35]
+    run_exports:
+      # should be compatibility between minor releases
+      - {{ pin_subpackages('kealib', min_pin='x.x', max_pin='x.x') }}
 
 requirements:
     build:
-        - toolchain
-        - python  # [win]
         - cmake
         - hdf5 1.10.1
-        - vc 9  # [win and py27]
-        - vc 14  # [win and py35]
-
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
     run:
         - hdf5 1.10.1
-        - vc 9  # [win and py27]
-        - vc 14  # [win and py35]
 
 test:
     requires:
