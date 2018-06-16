@@ -21,6 +21,8 @@ requirements:
         - make  # [unix]
     host:
         - hdf5 1.10.1
+    run:
+        - hdf5 1.10.1
 
 test:
     requires:
