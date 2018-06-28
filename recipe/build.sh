@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd trunk
-
 mkdir build
 cd build
 
