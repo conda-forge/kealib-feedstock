@@ -6,7 +6,7 @@ package:
 
 source:
     url: https://bitbucket.org/chchrsc/kealib/downloads/kealib-{{ version }}.tar.gz
-    sha256: 9e5b300b393d624baeedf26ea5db9c845a33a6c41478fd6c4168743278abdefd
+    sha256: 1c80489f17114a229097c2e8c61d5e4c82ea63ae631c81a817fef95cfd527174
 
 build:
     number: 0
