@@ -1,4 +1,4 @@
-{% set version = "1.4.9" %}
+{% set version = "1.4.10" %}
 
 package:
   name: kealib
@@ -6,13 +6,10 @@ package:
 
 source:
   url: https://bitbucket.org/chchrsc/kealib/downloads/kealib-{{ version }}.tar.gz
-  sha256: 1c80489f17114a229097c2e8c61d5e4c82ea63ae631c81a817fef95cfd527174
-  patches:
-    # by default kealib forces C++98 mode which breaks other things built in C++11 mode
-    - disablecpp98.patch
+  sha256: b1bd2d6834d2fe09ba456fce77f7a9452b406dbe302f7ef1aabe924e45e6bb5e
 
 build:
-  number: 1003
+  number: 0
   run_exports:
     - {{ pin_subpackage('kealib', max_pin='x.x') }}
 
@@ -28,12 +25,11 @@ requirements:
     - hdf5
 
 test:
-  #requires:
-  #  - libgdal 2.2.*
+  requires:
+    - libgdal 2.2.*
   commands:
     # check we haven't broken GDAL
-    #- gdal_translate --formats
-    # GDAL check disabled since we don't have a version of GDAL linked against the new HDF5
+    - gdal_translate --formats
 
 about:
   home: http://kealib.org/
