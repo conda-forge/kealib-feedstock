@@ -12,7 +12,7 @@ source:
     - disablecpp98.patch
 
 build:
-  number: 3
+  number: 1003
   run_exports:
     - {{ pin_subpackage('kealib', max_pin='x.x') }}
 
