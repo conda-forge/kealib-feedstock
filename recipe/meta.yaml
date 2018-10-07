@@ -25,11 +25,11 @@ requirements:
     - hdf5
 
 test:
-  requires:
-    - libgdal 2.2.*
-  commands:
+  #requires:
+  #  - libgdal 2.2.*
+  #commands:
     # check we haven't broken GDAL
-    - gdal_translate --formats
+  #  - gdal_translate --formats
 
 about:
   home: http://kealib.org/
