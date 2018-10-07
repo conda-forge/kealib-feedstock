@@ -24,7 +24,7 @@ requirements:
   run:
     - hdf5
 
-test:
+#test:
   #requires:
   #  - libgdal 2.2.*
   #commands:
