@@ -11,3 +11,4 @@ hdf5:
 zip_keys:
 - - c_compiler
   - cxx_compiler
+  - hdf5
