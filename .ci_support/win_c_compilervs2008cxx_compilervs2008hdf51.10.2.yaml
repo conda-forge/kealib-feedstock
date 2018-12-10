@@ -1,13 +1,18 @@
+pin_run_as_build:
+  hdf5:
+    min_pin: x.x.x
+    max_pin: x.x.x
 c_compiler:
-- vs2015
+- vs2008
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2015
+- vs2008
 hdf5:
-- 1.10.4
+- 1.10.2
 zip_keys:
 - - c_compiler
   - cxx_compiler
+  - hdf5
