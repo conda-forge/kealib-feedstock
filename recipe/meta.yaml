@@ -10,7 +10,7 @@ source:
 
 build:
   number: 1004
-  skip: True  # [win and py2k]
+  skip: True  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('kealib', max_pin='x.x') }}
 
