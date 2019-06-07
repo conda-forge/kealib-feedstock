@@ -7,9 +7,13 @@ package:
 source:
   url: https://bitbucket.org/chchrsc/kealib/downloads/kealib-{{ version }}.tar.gz
   sha256: b1bd2d6834d2fe09ba456fce77f7a9452b406dbe302f7ef1aabe924e45e6bb5e
+  patches:
+    # We can drop this patch in the next release.
+    # See https://bitbucket.org/chchrsc/kealib/commits/b452508d7e439ca5914867575b0a8c430d3a2140
+    - kea-config.patch
 
 build:
-  number: 1004
+  number: 1005
   skip: True  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('kealib', max_pin='x.x') }}
