@@ -1,19 +1,15 @@
-{% set version = "1.4.10" %}
+{% set version = "1.4.12" %}
 
 package:
   name: kealib
   version: {{ version }}
 
 source:
-  url: https://bitbucket.org/chchrsc/kealib/downloads/kealib-{{ version }}.tar.gz
-  sha256: b1bd2d6834d2fe09ba456fce77f7a9452b406dbe302f7ef1aabe924e45e6bb5e
-  patches:
-    # We can drop this patch in the next release.
-    # See https://bitbucket.org/chchrsc/kealib/commits/b452508d7e439ca5914867575b0a8c430d3a2140
-    - kea-config.patch
+  url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
+  sha256: 0b100e36b3e25e57487aa197d7be47f22e1b30afb16a57fdaa5f877696ec321e
 
 build:
-  number: 1005
+  number: 0
   skip: True  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('kealib', max_pin='x.x') }}
@@ -29,12 +25,12 @@ requirements:
   run:
     - hdf5
 
-#test:
-  #requires:
-  #  - libgdal 2.2.*
-  #commands:
+test:
+  requires:
+    - libgdal
+  commands:
     # check we haven't broken GDAL
-  #  - gdal_translate --formats
+    - gdal_translate --formats
 
 about:
   home: http://kealib.org/
