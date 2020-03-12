@@ -8,7 +8,11 @@ cxx_compiler:
 - vs2015
 hdf5:
 - 1.10.5
+libgdal:
+- '3.0'
 pin_run_as_build:
+  libgdal:
+    max_pin: x.x
   vc:
     max_pin: x
 vc:
