@@ -9,7 +9,7 @@ source:
   sha256: 4135d13080ace420df8a0e39347c7fff939a94425b4d61c4cd6c3dd90563f0c6
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('kealib', max_pin='x.x') }}
