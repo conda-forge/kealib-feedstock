@@ -13,5 +13,7 @@ libgdal:
 pin_run_as_build:
   libgdal:
     max_pin: x.x
+target_platform:
+- win-64
 vc:
 - '14'
