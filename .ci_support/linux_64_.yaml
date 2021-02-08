@@ -17,7 +17,7 @@ docker_image:
 hdf5:
 - 1.10.6
 libgdal:
-- '3.0'
+- '3.1'
 pin_run_as_build:
   libgdal:
     max_pin: x.x
@@ -26,3 +26,5 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+- - cdt_name
+  - docker_image
