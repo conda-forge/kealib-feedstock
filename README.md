@@ -168,6 +168,3 @@ Feedstock Maintainers
 * [@danclewley](https://github.com/danclewley/)
 * [@gillins](https://github.com/gillins/)
 
-
-<!-- dummy commit to enable rerendering -->
-
