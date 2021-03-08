@@ -25,10 +25,15 @@ requirements:
   run:
     - hdf5
 
-#test:
+test:
 #  requires:
 #    - libgdal
-#  commands:
+  commands:
+    - if not exist %LIBRARY_BIN%\\kealib.dll exit 1            # [win]
+    - if not exist %LIBRARY_LIB%\\kealib.lib exit 1            # [win]
+    - if not exist %LIBRARY_INC%\\libkea\\KEAImageIO.h exit 1  # [win]
+    - test -f $PREFIX/lib/kealib{SHLIB_EXT}                    # [unix]
+    - test -f $PREFIX/include/libkea/KEAImageIO.h              # [unix]
 #    # check we haven't broken GDAL
 #    - gdal_translate --formats
 
