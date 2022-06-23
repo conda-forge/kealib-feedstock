@@ -1,4 +1,4 @@
-{% set version = "1.4.14" %}
+{% set version = "1.4.15" %}
 
 package:
   name: kealib
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
-  sha256: da5d4a540b34afb61665cb7b6bf284825b51464eaf2a23ccca16955e2712cab2
+  sha256: 40f2573c00f005f93c1fa88f1f13bfbd485cbc7a9b3f1c706931e69bff17dae4
   patches:
     # fix wrong name in kea-config.bat under Windows
     - kea-config.patch  # [win]
 
 build:
-  number: 4
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('kealib', max_pin='x.x') }}
 
