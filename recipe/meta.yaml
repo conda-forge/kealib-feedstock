@@ -7,9 +7,6 @@ package:
 source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
   sha256: 40f2573c00f005f93c1fa88f1f13bfbd485cbc7a9b3f1c706931e69bff17dae4
-  patches:
-    # fix wrong name in kea-config.bat under Windows
-    - kea-config.patch  # [win]
 
 build:
   number: 0
