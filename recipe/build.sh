@@ -9,7 +9,7 @@ cmake ${CMAKE_ARGS} -D CMAKE_INSTALL_PREFIX=$PREFIX \
 
 make -j $CPU_COUNT
 make install
-if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 make test
 fi
 
