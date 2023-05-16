@@ -25,8 +25,8 @@ requirements:
     
 outputs:
   - name: kealib
-    script: build.sh  # [unix]
-    script: bld.bat  # [win]
+    script: install_lib.sh  # [unix]
+    script: install_lib.bat  # [win]
     build:
       run_exports:
         - {{ pin_subpackage('kealib', max_pin='x.x') }}
