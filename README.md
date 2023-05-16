@@ -1,11 +1,11 @@
-About kealib
-============
+About kealib-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kealib-feedstock/blob/main/LICENSE.txt)
 
 Home: http://kealib.org/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kealib-feedstock/blob/main/LICENSE.txt)
 
 Summary: The KEA format provides an implementation of the GDAL specification within the the HDF5 file format.
 
