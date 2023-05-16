@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 package:
   name: kealib
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
-  sha256: d19a0fb051019f87fe413bda76472bf4fff8fca52ede92e0ffd983caeafd05b8
+  sha256: 06cd547b1e40394b9539beaf6982bd249e8ee93d6150295e9cd9161d00829657
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('kealib', max_pin='x.x') }}
