@@ -1,7 +1,48 @@
-About kealib-feedstock
-======================
+About kealib-split-feedstock
+============================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kealib-feedstock/blob/main/LICENSE.txt)
+
+About kealib-split
+------------------
+
+Home: http://kealib.org/
+
+Package license: MIT
+
+Summary: The KEA format provides an implementation of the GDAL specification within the the HDF5 file format.
+
+Development: https://github.com/ubarsc/kealib
+
+Documentation: https://gdal.org/drivers/raster/kea.html
+
+"KEA is an image file format, named after the New Zealand bird, that provides a full implementation 
+of the GDAL data model and is implemented within a HDF5 file. A software library, libkea, is used 
+to access the file format. The format has comparable performance with existing formats while 
+producing smaller file sizes and is already within active use for a number of projects 
+within Landcare Research, New Zealand, and the wider community."
+
+About kealib
+------------
+
+Home: http://kealib.org/
+
+Package license: MIT
+
+Summary: The KEA format provides an implementation of the GDAL specification within the the HDF5 file format.
+
+Development: https://github.com/ubarsc/kealib
+
+Documentation: https://gdal.org/drivers/raster/kea.html
+
+"KEA is an image file format, named after the New Zealand bird, that provides a full implementation
+of the GDAL data model and is implemented within a HDF5 file. A software library, libkea, is used
+to access the file format. The format has comparable performance with existing formats while
+producing smaller file sizes and is already within active use for a number of projects
+within Landcare Research, New Zealand, and the wider community."
+
+About pykealib
+--------------
 
 Home: http://kealib.org/
 
@@ -93,27 +134,28 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-kealib-green.svg)](https://anaconda.org/conda-forge/kealib) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/kealib.svg)](https://anaconda.org/conda-forge/kealib) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/kealib.svg)](https://anaconda.org/conda-forge/kealib) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/kealib.svg)](https://anaconda.org/conda-forge/kealib) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pykealib-green.svg)](https://anaconda.org/conda-forge/pykealib) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pykealib.svg)](https://anaconda.org/conda-forge/pykealib) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pykealib.svg)](https://anaconda.org/conda-forge/pykealib) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pykealib.svg)](https://anaconda.org/conda-forge/pykealib) |
 
-Installing kealib
-=================
+Installing kealib-split
+=======================
 
-Installing `kealib` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `kealib-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `kealib` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `kealib, pykealib` can be installed with `conda`:
 
 ```
-conda install kealib
+conda install kealib pykealib
 ```
 
 or with `mamba`:
 
 ```
-mamba install kealib
+mamba install kealib pykealib
 ```
 
 It is possible to list all of the versions of `kealib` available on your platform with `conda`:
@@ -183,17 +225,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating kealib-feedstock
-=========================
+Updating kealib-split-feedstock
+===============================
 
-If you would like to improve the kealib recipe or build a new
+If you would like to improve the kealib-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/kealib-feedstock are
+Note that all branches in the conda-forge/kealib-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
