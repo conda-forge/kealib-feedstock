@@ -1,5 +1,8 @@
 
+set -xe
+
 cd python
+rm -rf build
 mkdir build
 cd build
 
