@@ -1,6 +1,6 @@
 
 set -xe
-
+env
 cd python
 rm -rf build
 mkdir build
