@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
   sha256: 06cd547b1e40394b9539beaf6982bd249e8ee93d6150295e9cd9161d00829657
+  patches:
+    - python_cross_compile.patch
 
 build:
   number: 1
@@ -42,10 +44,6 @@ outputs:
         - hdf5
         
   - name: pykealib
-    # skip cross compilation for now as importing awkward to get the version
-    # number results in libawkward-cpu-kernels.so being loaded which turns out
-    # to be for the wrong arch... Must add ability to override this in the cmake  
-    skip: true  # [build_platform != target_platform]
     script: build_python.sh  # [unix]
     script: bld_python.bat  # [win]
     entry_points:
