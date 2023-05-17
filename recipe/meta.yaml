@@ -71,9 +71,9 @@ outputs:
     # skip for now - neither GDAL nor fakegdal installed at this point
     # Adding dependency on GDAL ends up being circular.
     # Maybe should install fakegdal ?
-    #test:
-    #  imports:
-    #    - kealib.extrat
+    test:
+      imports:
+        - kealib.extrat
     #  commands:
     #    - kea_build_neighbours -h
 
