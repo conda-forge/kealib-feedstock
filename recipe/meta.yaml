@@ -54,7 +54,10 @@ outputs:
         - {{ compiler('cxx') }}
         - cmake
         - make  # [unix]
-        # don't install cross compile etc as this breaks the cmake/python stuff
+        # don't install cross compile etc as this breaks the cmake/python stuff on Linux
+        # but appears to be needed on OSX
+        - python                                 # [osx and build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [osx and build_platform != target_platform]
       host:
         - python
         - numpy
