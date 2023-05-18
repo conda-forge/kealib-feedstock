@@ -1,18 +1,18 @@
 {% set version = "1.5.1" %}
 
 package:
-  name: kealib
+  name: kealib-split
   version: {{ version }}
 
 source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
   sha256: 06cd547b1e40394b9539beaf6982bd249e8ee93d6150295e9cd9161d00829657
+  patches:
+    - python_cross_compile.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
-  run_exports:
-    - {{ pin_subpackage('kealib', max_pin='x.x') }}
 
 requirements:
   build:
@@ -24,6 +24,58 @@ requirements:
     - hdf5
   run:
     - hdf5
+    
+outputs:
+  - name: kealib
+    script: install_lib.sh  # [unix]
+    script: install_lib.bat  # [win]
+    build:
+      run_exports:
+        - {{ pin_subpackage('kealib', max_pin='x.x') }}
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - cmake
+        - make  # [unix]
+      host:
+        - hdf5
+      run:
+        - hdf5
+        
+  - name: pykealib
+    script: build_python.sh  # [unix]
+    script: bld_python.bat  # [win]
+    entry_points:
+      - kea_build_neighbours = kealib.build_neighbours:main
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - cmake
+        - make  # [unix]
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - numpy                                  # [build_platform != target_platform]
+      host:
+        - python
+        - numpy
+        - pybind11
+        - awkward
+        - {{ pin_subpackage('kealib', exact=True) }}
+      run:
+        - python
+        - awkward
+        - {{ pin_compatible('numpy') }}
+        - {{ pin_subpackage('kealib', exact=True) }}
+    # skip for now - neither GDAL nor fakegdal installed at this point
+    # Adding dependency on GDAL ends up being circular.
+    # Maybe should install fakegdal ?
+    #test:
+    #  imports:
+    #    - kealib.extrat
+    #  commands:
+    #    - kea_build_neighbours -h
 
 #test:
 #  requires:
