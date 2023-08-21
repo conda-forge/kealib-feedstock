@@ -11,7 +11,7 @@ source:
     - python_cross_compile.patch
 
 build:
-  number: 4
+  number: 5
   skip: true  # [win and vc<14]
 
 requirements:
