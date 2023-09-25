@@ -1,4 +1,4 @@
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: kealib-split
@@ -6,12 +6,10 @@ package:
 
 source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
-  sha256: 06cd547b1e40394b9539beaf6982bd249e8ee93d6150295e9cd9161d00829657
-  patches:
-    - python_cross_compile.patch
+  sha256: c4e17c472761a39e45184b5fa687395b319ac75430e0f6584dbf4cec6e335572
 
 build:
-  number: 5
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -24,7 +22,7 @@ requirements:
     - hdf5
   run:
     - hdf5
-    
+
 outputs:
   - name: kealib
     script: install_lib.sh  # [unix]
@@ -42,7 +40,7 @@ outputs:
         - hdf5
       run:
         - hdf5
-        
+
   - name: pykealib
     script: build_python.sh  # [unix]
     script: bld_python.bat  # [win]
