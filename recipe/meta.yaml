@@ -1,4 +1,4 @@
-{% set version = "1.5.2" %}
+{% set version = "1.5.3" %}
 
 package:
   name: kealib-split
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
-  sha256: c4e17c472761a39e45184b5fa687395b319ac75430e0f6584dbf4cec6e335572
+  sha256: 32b2e3c90553a03cf1e8d03781c3710500ca919bca674bc370e86f15338ee93e
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
