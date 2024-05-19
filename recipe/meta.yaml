@@ -9,12 +9,13 @@ source:
   sha256: 32b2e3c90553a03cf1e8d03781c3710500ca919bca674bc370e86f15338ee93e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make  # [unix]
@@ -33,6 +34,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - cmake
         - make  # [unix]
@@ -49,6 +51,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - cmake
         - make  # [unix]
@@ -65,7 +68,6 @@ outputs:
       run:
         - python
         - awkward
-        - {{ pin_compatible('numpy') }}
         - {{ pin_subpackage('kealib', exact=True) }}
     # skip for now - neither GDAL nor fakegdal installed at this point
     # Adding dependency on GDAL ends up being circular.
