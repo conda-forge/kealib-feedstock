@@ -3,50 +3,6 @@ About kealib-split-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kealib-feedstock/blob/main/LICENSE.txt)
 
-
-About kealib-split
-------------------
-
-Home: http://kealib.org/
-
-Package license: MIT
-
-Summary: The KEA format provides an implementation of the GDAL specification within the the HDF5 file format.
-
-Development: https://github.com/ubarsc/kealib
-
-Documentation: https://gdal.org/drivers/raster/kea.html
-
-"KEA is an image file format, named after the New Zealand bird, that provides a full implementation 
-of the GDAL data model and is implemented within a HDF5 file. A software library, libkea, is used 
-to access the file format. The format has comparable performance with existing formats while 
-producing smaller file sizes and is already within active use for a number of projects 
-within Landcare Research, New Zealand, and the wider community."
-
-
-About kealib
-------------
-
-Home: http://kealib.org/
-
-Package license: MIT
-
-Summary: The KEA format provides an implementation of the GDAL specification within the the HDF5 file format.
-
-Development: https://github.com/ubarsc/kealib
-
-Documentation: https://gdal.org/drivers/raster/kea.html
-
-"KEA is an image file format, named after the New Zealand bird, that provides a full implementation
-of the GDAL data model and is implemented within a HDF5 file. A software library, libkea, is used
-to access the file format. The format has comparable performance with existing formats while
-producing smaller file sizes and is already within active use for a number of projects
-within Landcare Research, New Zealand, and the wider community."
-
-
-About pykealib
---------------
-
 Home: http://kealib.org/
 
 Package license: MIT
@@ -82,27 +38,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=500&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/kealib-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=500&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/kealib-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=500&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/kealib-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=500&branchName=main">
@@ -114,13 +49,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=500&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/kealib-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=500&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/kealib-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
