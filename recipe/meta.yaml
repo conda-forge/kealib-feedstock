@@ -19,6 +19,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - libcxx <19  # [osx]
+    - libcxx-devel >17  # [osx]
     - make  # [unix]
   host:
     - hdf5
@@ -39,6 +40,7 @@ outputs:
         - {{ compiler('cxx') }}
         - cmake
         - libcxx <19  # [osx]
+        - libcxx-devel >17  # [osx]
         - make  # [unix]
       host:
         - hdf5
@@ -57,6 +59,7 @@ outputs:
         - {{ compiler('cxx') }}
         - cmake
         - libcxx <19  # [osx]
+        - libcxx-devel >17  # [osx]
         - make  # [unix]
         # don't install cross compile etc as this breaks the cmake/python stuff on Linux
         # but appears to be needed on OSX
