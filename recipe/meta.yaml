@@ -18,7 +18,7 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
-    - libcxx-devel
+    - libcxx-devel  # [unix]
     - make  # [unix]
   host:
     - hdf5
@@ -38,7 +38,7 @@ outputs:
         - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - cmake
-        - libcxx-devel
+        - libcxx-devel  # [unix]
         - make  # [unix]
       host:
         - hdf5
@@ -56,7 +56,7 @@ outputs:
         - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - cmake
-        - libcxx-devel
+        - libcxx-devel  # [unix]
         - make  # [unix]
         # don't install cross compile etc as this breaks the cmake/python stuff on Linux
         # but appears to be needed on OSX
