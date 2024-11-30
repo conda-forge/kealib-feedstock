@@ -63,7 +63,8 @@ outputs:
         - python
         - numpy
         - pybind11
-        - awkward
+        # ensure we get a recent awkward... By default an extremely old one can be selected.
+        - awkward >=2
         - {{ pin_subpackage('kealib', exact=True) }}
       run:
         - python
