@@ -9,7 +9,7 @@ source:
   sha256: c05a8621d86e293de0f45fc194751f67f841a68e7a45d95b2f37fcdfb2dc2c14
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -59,6 +59,8 @@ outputs:
         # but appears to be needed on OSX
         - python                                 # [osx and build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [osx and build_platform != target_platform]
+        # cmake needs this on osx?
+        - zstd  # [osx]
       host:
         - python
         - numpy
@@ -68,7 +70,8 @@ outputs:
         - {{ pin_subpackage('kealib', exact=True) }}
       run:
         - python
-        - awkward
+        # ensure we get a recent awkward... By default an extremely old one can be selected.
+        - awkward >=2
         - {{ pin_subpackage('kealib', exact=True) }}
     # skip for now - neither GDAL nor fakegdal installed at this point
     # Adding dependency on GDAL ends up being circular.
