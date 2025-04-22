@@ -8,7 +8,7 @@ source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
   sha256: 6c892db9c95d32fa67f927ca37e8019dcbca5146353d69ee8af3e71935115edd
   patches:
-    - pythonexe.patch
+    - pythonexe.patch  # [win]
 
 build:
   number: 1
