@@ -61,8 +61,6 @@ outputs:
         # but appears to be needed on OSX
         - python                                 # [osx and build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [osx and build_platform != target_platform]
-        # cmake needs this on osx?
-        - zstd  # [osx]
       host:
         - python
         - numpy
