@@ -1,11 +1,11 @@
 --- python/CMakeLists.txt.orig	2025-04-22 10:44:15.441738075 +1000
-+++ python/CMakeLists.txt	2025-04-22 11:09:08.908870869 +1000
++++ python/CMakeLists.txt	2025-04-22 11:48:58.813297885 +1000
 @@ -78,7 +78,10 @@
  target_link_libraries(testseg_libkea PRIVATE libkea::Kealib)
  
  # custom install step to create .pyc files
 -install(CODE "execute_process(COMMAND ${Python_EXECUTABLE} -m compileall ${PYKEA_INSTALL_DIR})")
-+file(TO_NATIVE_PATH ${Python_EXECUTABLE} Python_EXECUTABLE_NATIVE)
++cmake_path(NATIVE_PATH "${Python_EXECUTABLE}" Python_EXECUTABLE_NATIVE)
 +message(STATUS "execute_process(COMMAND ${Python_EXECUTABLE_NATIVE} -m compileall ${PYKEA_INSTALL_DIR})")
 +install(CODE "execute_process(COMMAND ${Python_EXECUTABLE_NATIVE} -m compileall ${PYKEA_INSTALL_DIR})")
 +
