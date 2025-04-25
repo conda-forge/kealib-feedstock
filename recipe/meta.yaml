@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/ubarsc/kealib/releases/download/kealib-{{ version }}/kealib-{{ version }}.tar.gz
   sha256: 6c892db9c95d32fa67f927ca37e8019dcbca5146353d69ee8af3e71935115edd
+  patches:
+    - pythonexe.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -59,8 +61,6 @@ outputs:
         # but appears to be needed on OSX
         - python                                 # [osx and build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [osx and build_platform != target_platform]
-        # cmake needs this on osx?
-        - zstd  # [osx]
       host:
         - python
         - numpy

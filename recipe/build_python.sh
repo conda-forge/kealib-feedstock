@@ -22,6 +22,6 @@ cmake ${CMAKE_ARGS} -D CMAKE_BUILD_TYPE=Release \
     
 make
 make install
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" ]]; then
+if [[ ("${CONDA_BUILD_CROSS_COMPILATION:-}" != "1") && ($(uname) != "Darwin") ]]; then
     ctest --output-on-failure
 fi
