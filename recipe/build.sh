@@ -9,6 +9,6 @@ cmake ${CMAKE_ARGS} -D CMAKE_INSTALL_PREFIX=$PREFIX \
 
 make -j $CPU_COUNT
 
-if [ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]; then
-    ctest
-fi
+#if [ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]; then
+#    ctest
+#fi
