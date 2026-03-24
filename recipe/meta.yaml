@@ -11,7 +11,7 @@ source:
     - pythonexe.patch  # [win]
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and vc<14]
 
 requirements:
@@ -23,8 +23,10 @@ requirements:
     - make  # [unix]
   host:
     - hdf5
+    - zlib
   run:
     - hdf5
+    - zlib
 
 outputs:
   - name: kealib
@@ -42,8 +44,10 @@ outputs:
         - make  # [unix]
       host:
         - hdf5
+        - zlib
       run:
         - hdf5
+        - zlib
 
   - name: pykealib
     script: build_python.sh  # [unix]
