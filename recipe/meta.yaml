@@ -23,10 +23,10 @@ requirements:
     - make  # [unix]
   host:
     - hdf5
+    - highfive
     - zlib
   run:
     - hdf5
-    - zlib
 
 outputs:
   - name: kealib
@@ -44,10 +44,10 @@ outputs:
         - make  # [unix]
       host:
         - hdf5
+        - highfive
         - zlib
       run:
         - hdf5
-        - zlib
 
   - name: pykealib
     script: build_python.sh  # [unix]
@@ -67,6 +67,7 @@ outputs:
         - cross-python_{{ target_platform }}     # [osx and build_platform != target_platform]
       host:
         - python
+        - highfive
         - numpy
         - pybind11
         # ensure we get a recent awkward... By default an extremely old one can be selected.
