@@ -52,6 +52,9 @@ outputs:
   - name: pykealib
     script: build_python.sh  # [unix]
     script: bld_python.bat  # [win]
+    build:
+      # awkward no longer appears to be available for ppc64le
+      skip: true  # [ppc64le]
     entry_points:
       - kea_build_neighbours = kealib.build_neighbours:main
     requirements:
