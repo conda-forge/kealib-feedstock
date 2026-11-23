@@ -1,5 +1,5 @@
---- CMakeLists.txt.orig	2026-11-23 11:43:05.532708104 +1000
-+++ CMakeLists.txt	2026-11-23 11:43:44.731017503 +1000
+--- python/CMakeLists.txt.orig	2026-11-23 11:43:05.532708104 +1000
++++ python/CMakeLists.txt	2026-11-23 11:43:44.731017503 +1000
 @@ -75,7 +75,7 @@
  target_link_libraries(testseg PRIVATE Kealib::Kealib)
  
